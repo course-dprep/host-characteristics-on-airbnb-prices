@@ -7,7 +7,7 @@ For this teamassignment we are going to investigate data from the Airbnb site. T
 What are the effects of different host characteristics on the prices of Airbnb's in Amsterdam?
 
 ## Research method
-This project will use the OLS regression method to examine the price determinants of Airbnb's in Amsterdam. The dependent variable is the Airbnb price. The independent variables will be host_since, host_response_time, host_response_rate, host_is_superhost, host_has_profile_pic and host_identity_verified.
+This project will use the OLS regression method to examine the price determinants of Airbnb's in Amsterdam. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price. The independent variables will be host_since, host_response_time, host_response_rate, host_is_superhost, host_has_profile_pic and host_identity_verified.
 
 
 
