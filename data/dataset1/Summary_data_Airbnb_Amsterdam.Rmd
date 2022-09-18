@@ -1,0 +1,30 @@
+---
+title: "Summary_data_Airbnb_Amsterdam"
+author: "Nynke Voermans, Nina Verschuuren, Amber Kalse and Meggy Lemmens"
+date: "2022-09-18"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(readr)
+Airbnb_Amsterdam <- read_csv("Downloads/Airbnb_Amsterdam.csv")
+```
+
+# Explanation important variables for our research:
+- price = the price of the Airbnb in Amsterdam on 7-9-22. This will be our dependent variable. This variable is measured in dollars.
+- host_since = the date that the host started with their Airbnb. This is measured by a specific date.
+- host_response_time = how fast the host responds. This is measured in different categories. We need to convert this.
+- host_response_rate = how often the host responds. This is measured in percentages.
+- host_is_superhost = says whether the host is a super host. This is a Boolean variable. We need to convert this into a dummy variable.
+- host_has_profile_pic = says whether the host has a profile picture. This is a Boolean variable. We need to convert this into a dummy variable.
+- host_identity_verified = indicates if the host information is verified. This is a Boolean variable. We need to convert this into a dummy variable.
+
+
