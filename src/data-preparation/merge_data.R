@@ -1,9 +1,51 @@
 # Load datasets into R 
-df1 <- read.csv("./gen/data-preparation/input/dataset1.csv")
-df2 <- read.csv("./gen/data-preparation/input/dataset2.csv")
+#“bad” countries (high inflation)
+Boston <- read.csv("unitedstatesmaboston.csv")
+Rio <- read.csv("brazilrjriodejaneiro.csv")
+Mexico <- read.csv("mexicodfmexicocity.csv")
+Capetown <- read.csv("southafricawccapetown.csv")
+Santiago <- read.csv("chilermsantiago.csv")
+#“good” countries (low inflation)
+Tokyo <- read.csv("japankanttokyo.csv")
+Geneva <- read.csv("switzerlandgenevageneva.csv")
+Beijing <- read.csv("chinabeijingbeijing.csv")
+Bangkok <- read.csv("thailandcentralthailandbangkok.csv")
+Athens <- read.csv("greeceatticaathens.csv")
 
-# Merge on id
-df_merged <- merge(df1,df2,by="id")
+# Make new variable with city for each city
+library(dplyr)
+# High inflation
+Capetown$city_name <- c("Capetown")
+Santiago$city_name <- c("Santiago")
+Mexico$city_name <- c("Mexico")
+Rio$city_name <- c("Rio")
+Boston$city_name <- c("Boston")
+# Low inflation
+Tokyo$city_name <- c("Tokyo")
+Geneva$city_name <- c("Geneva")
+Beijing$city_name <- c("Beijing")
+Bangkok$city_name <- c("Bankok")
+Athens$city_name <- c("Athens")
 
-# Save merged data
-save(df_merged,file="./gen/data-preparation/temp/data_merged.RData")
+# Make dataset for high inflation cities
+high_inflation_dataset <- bind_rows(Capetown, Santiago, Mexico, Rio, Boston)
+
+# Make dummy variable for high inflation cities 
+high_inflation_dataset$inflation <- c("0")
+
+# Make dataset for low inflation cities
+low_inflation_dataset <- bind_rows(Tokyo, Geneva, Beijing, Bangkok, Athens)
+
+# Make dummy variable for low inflation cities 
+low_inflation_dataset$inflation <- c("1")
+
+# Combine both datasets in full dataset
+full_dataset_cities <- bind_rows(low_inflation_dataset, high_inflation_dataset)
+
+# Write csv
+write_csv(full_dataset_cities, "full_dataset_cities.csv")
+write_csv(high_inflation_dataset, "high_inflation_dataset.csv")
+write_csv(low_inflation_dataset, "low_inflation_dataset.csv")
+
+
+
