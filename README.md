@@ -49,7 +49,7 @@ What is the effect of different host characteristics on Airbnb prices, moderated
 ![image](https://user-images.githubusercontent.com/62336902/192232633-675a6e58-f2f6-495f-84c4-18f69bdccef7.png)
 
 
-## Method
+## 2. Method
 
 ### Datasets
 
@@ -79,7 +79,7 @@ This project will use the OLS regression method to examine the price determinant
 price = B0 + B1 * host_since + B2 * host_response_time + B3 * host_response_rate + B4 * host_is_superhost + B5 * host_has_profile_pic + B6 * host_identity_verified. Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
 
 
-## Data 
+## 3. Data 
 
 ### Data exploration
 
@@ -88,7 +88,7 @@ price = B0 + B1 * host_since + B2 * host_response_time + B3 * host_response_rate
 ### Data analysis
 
 
-## Repository
+## 4. Repository
 
 ### Contents
 
