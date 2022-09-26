@@ -4,6 +4,28 @@
 
 
 # Investigating-Airbnb-team6
+
+## Table of content
+1. Our project
+- Short project description
+- Research motivation
+- Research question
+- Conceptual model
+
+2. Method
+- Datasets
+- Research method
+
+3. Data preperation and analysis
+- Data exploration
+- Data preperation
+- Data analysis
+
+4. Repository
+- Contents
+- Structure
+
+
 ## Short project description 
 For this teamassignment we are going to investigate data from the Airbnb site. There are different datasets available for a lot of cities worldwide. Each dataset contains information about characteristics of Airbnb's, reviews, prices and more. Since the current inflation in the Netherlands is very high we decided to look at the prices of Airbnb's in Amsterdam. This project will investigate the effect of different host characteristics on the heigt of the prices of an Airbnb. Examples of the characteristics that will be investigated are host_since, host_response_time and host_response_rate. The full regress
 ion will be given in the method section.
