@@ -1,8 +1,22 @@
-# Download dataset 1
-# dir.create('./data/dataset1')  # Uncomment if need to create directory with R
-download.file('https://rgreminger.github.io/files/dataset1.csv','./data/dataset1/dataset1.csv')
+# Download datasets
 
-# Download dataset 2
-# dir.create('./data/dataset2')  # Uncomment if need to create directory with R
-download.file('https://rgreminger.github.io/files/dataset2.csv','./data/dataset2/dataset2.csv')
+urls = c('http://data.insideairbnb.com/united-states/ma/boston/2022-06-13/data/listings.csv.gz',
+        'http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2022-06-20/data/listings.csv.gz',
+        'http://data.insideairbnb.com/mexico/df/mexico-city/2022-06-21/data/listings.csv.gz')
 
+for (url in urls) {
+  filename = paste0(gsub('[^a-zA-Z0-9]', '', url), '.csv') 
+  filename = gsub('httpdatainsideairbnbcom', '', filename) 
+  download.file(url, destfile = filename) 
+}
+
+
+
+download.file('http://data.insideairbnb.com/united-states/ma/boston/2022-06-13/data/listings.csv.gz', "Tokyo")
+download.file('http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2022-06-20/data/listings.csv.gz', "Rio")
+download.file('http://data.insideairbnb.com/mexico/df/mexico-city/2022-06-21/data/listings.csv.gz', "Mexico")
+
+library(tidyverse)
+Tokyo <- read_csv('Tokyo')
+Rio <- read.csv('Rio')
+Mexico <- read.csv('Mexico')
