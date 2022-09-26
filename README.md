@@ -39,6 +39,12 @@ Bangkok and Athens. To what extent does inflation moderate the effect of host ch
 
 What is the effect of different host characteristics on Airbnb prices, moderated by high or low inflation?
 
+4 different subquestions:
+1. What is the effect of different host characteristics on Airbnb prices in cities with high inflation?
+2. What is the effect of different host characteristics on Airbnb prices in cities with low inflation?
+3. What is the difference between the effect of different host characteristics on Airbnb prices in cities with high inflation and cities with low inflation?
+4. What is the general effect of different host characteristics on Airbnb prices?
+
 ### Conceptual model
 ![image](https://user-images.githubusercontent.com/62336902/192232633-675a6e58-f2f6-495f-84c4-18f69bdccef7.png)
 
