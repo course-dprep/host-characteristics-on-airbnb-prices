@@ -1,9 +1,4 @@
-/ Make more subtitles according to what we need to do evey week: add a table of content - 7 /
-
-
-
-
-# Investigating-Airbnb-team6
+# Are hosts influencing the price?
 
 ## Table of content
 1. Our project
