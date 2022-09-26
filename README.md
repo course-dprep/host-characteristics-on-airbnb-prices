@@ -37,6 +37,7 @@ Bangkok and Athens. To what extent does inflation moderate the effect of host ch
 ### Research question
 
 ### Conceptual model
+![image](https://user-images.githubusercontent.com/62336902/192232633-675a6e58-f2f6-495f-84c4-18f69bdccef7.png)
 
 
 ## Method
