@@ -2,8 +2,7 @@
 
 ## Table of content
 1. Our project
-- Short project description
-- Research motivation
+- Short project description and research motivation
 - Research question
 - Conceptual model
 
@@ -19,6 +18,38 @@
 4. Repository
 - Contents
 - Structure
+
+## 1. Our project
+
+### Short project description and research motivation
+
+### Research question
+
+### Conceptual model
+
+
+## Method
+
+### Datasets
+
+### Research method
+
+
+## Data 
+
+### Data exploration
+
+### Data preperation
+
+### Data analysis
+
+
+## Repository
+
+### Contents
+
+### Structure
+
 
 
 ## Short project description 
