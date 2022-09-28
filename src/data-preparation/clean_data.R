@@ -13,3 +13,10 @@ low_inflation_dataset$host_identity_verified <- ifelse(low_inflation_dataset$hos
 high_inflation_dataset$host_identity_verified <- ifelse(high_inflation_dataset$host_is_superhost == "True", 1, 0)
 full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_is_superhost == "True", 1, 0)
 
+# Subset of important variables, deleting unimportant variables
+low_inflation_dataset <-low_inflation_dataset %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
+View(low_inflation_dataset)
+high_inflation_dataset <-high_inflation_dataset %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
+View(high_inflation_dataset)
+full_dataset_cities <- full_dataset_cities %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
+View(full_dataset_cities)
