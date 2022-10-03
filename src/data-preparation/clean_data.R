@@ -1,17 +1,17 @@
 # Make dummy of the variable "host_is_superhost"
-low_inflation_dataset$host_is_superhost <- ifelse(low_inflation_dataset$host_is_superhost == "True", 1, 0)
-high_inflation_dataset$host_is_superhost <- ifelse(high_inflation_dataset$host_is_superhost == "True", 1, 0)
-full_dataset_cities$host_is_superhost <- ifelse(full_dataset_cities$host_is_superhost == "True", 1, 0)
+low_inflation_dataset$host_is_superhost <- ifelse(low_inflation_dataset$host_is_superhost == "t", 1, 0)
+high_inflation_dataset$host_is_superhost <- ifelse(high_inflation_dataset$host_is_superhost == "t", 1, 0)
+full_dataset_cities$host_is_superhost <- ifelse(full_dataset_cities$host_is_superhost == "t", 1, 0)
 
 # Make dummy of the variable "host_has_profile_pic" 
-low_inflation_dataset$host_has_profile_pic <- ifelse(low_inflation_dataset$host_has_profile_pic == "TRUE", 1, 0)
-high_inflation_dataset$host_has_profile_pic <- ifelse(high_inflation_dataset$host_has_profile_pic == "TRUE", 1, 0)
-full_dataset_cities$host_has_profile_pic <- ifelse(full_dataset_cities$host_has_profile_pic == "TRUE", 1, 0)
+low_inflation_dataset$host_has_profile_pic <- ifelse(low_inflation_dataset$host_has_profile_pic == "t", 1, 0)
+high_inflation_dataset$host_has_profile_pic <- ifelse(high_inflation_dataset$host_has_profile_pic == "t", 1, 0)
+full_dataset_cities$host_has_profile_pic <- ifelse(full_dataset_cities$host_has_profile_pic == "t", 1, 0)
 
 # Make dummy of the variable "host_identity_verified"
-low_inflation_dataset$host_identity_verified <- ifelse(low_inflation_dataset$host_is_superhost == "True", 1, 0)
-high_inflation_dataset$host_identity_verified <- ifelse(high_inflation_dataset$host_is_superhost == "True", 1, 0)
-full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_is_superhost == "True", 1, 0)
+low_inflation_dataset$host_identity_verified <- ifelse(low_inflation_dataset$host_is_superhost == "t", 1, 0)
+high_inflation_dataset$host_identity_verified <- ifelse(high_inflation_dataset$host_is_superhost == "t", 1, 0)
+full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_is_superhost == "t", 1, 0)
 
 # Subset of important variables, deleting unimportant variables
 low_inflation_dataset <-low_inflation_dataset %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
@@ -49,4 +49,7 @@ high_inflation_dataset['host_response_time'][high_inflation_dataset['host_respon
 high_inflation_dataset$host_response_time[is.na(high_inflation_dataset$host_response_time)] <- median(high_inflation_dataset$host_response_time, na.rm = T)
 View(high_inflation_dataset)
 
-
+# see all possible values of the dummies to test if it worked
+table(low_inflation_dataset$host_is_superhost)
+table(high_inflation_dataset$host_is_superhost)
+table(full_dataset_cities$host_is_superhost)
