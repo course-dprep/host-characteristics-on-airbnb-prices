@@ -1,24 +1,21 @@
 # Are hosts influencing the price?
 
 ## Table of content
-1. Our project
-- Short project description and research motivation
-- Research question
-- Conceptual model
+[1. Our project](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#1-our-project)
+- [Short project description and research motivation](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#short-project-description-and-research-motivation)
+- [Research question](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#research-question)
+- [Conceptual model](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#conceptual-model)
+                                                                                                                  
+[2. Method](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#2-method)
+- [Datasets](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#datasets)
+- [Variables](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#variables)
+- [Research method](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#research-method)
 
-2. Method
-- Datasets
-- Variables
-- Research method
+[3. Results and interpretation](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#results-and-interpretation)
 
-3. Data preperation and analysis
-- Data exploration
-- Data preperation
-- Data analysis
-
-4. Repository
-- Contents
-- Structure
+[4. Repository](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#4-repository)
+- [Contents](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#contents)
+- [Structure](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#structure)
 
 ## 1. Our project
 
@@ -75,42 +72,31 @@ We combined these seperate datasets into three different bigger datasets: one da
 
 | **Variable name**             | **Variable explanation**                           |
 | ----------------------------- |----------------------------------------------------|
-| price                   (p)   | Price of the Airbnb                                |
-| host_since              (hs)  | When the host started the Airbnb                   |
-| host_response_time      (hrt) | How fast the host responds                         |
-| host_response_rate      (hrr) | How often the host responds                        |
-| host_is_superhost       (his) | Dummy whether the host is a superhost              |
-| host_has_profile_pic    (hhpp)| Dummy whether the host has a profile pic           |
-| host_identity_verified  (hidv)| Dummy whether the identity of the host is verified |
+| price                   (Y)   | Price of the Airbnb                                |
+| host_since              (X1)  | When the host started the Airbnb                   |
+| host_response_time      (X2)  | How fast the host responds                         |
+| host_response_rate      (X3)  | How often the host responds                        |
+| host_is_superhost       (X4)  | Dummy whether the host is a superhost              |
+| host_has_profile_pic    (X5)  | Dummy whether the host has a profile pic           |
+| host_identity_verified  (X6)  | Dummy whether the identity of the host is verified |
 
 
 ### Research method
 
 This project will use the OLS regression method to examine the price determinants of Airbnb's in Amsterdam. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price. The independent variables are given in the table above. The regression is as follows:
 
-*p = B0 + B1 * hs + B2 * hrt + B3 * hrr + B4 * his + B5 * hhpp + B6 * hidv *
+**Y = b0 + b1X1 + b2X2 + b3X3 + b4X4 + b5X5 + b6X6**
 
 
 Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
 
-
-## 3. Data 
-
-### Data exploration
-
-### Data preperation
-
-### Data analysis
-
+## 3. Results and interpretation
 
 ## 4. Repository
 
 ### Contents
 
-### Structure
-
-
-## Structure of the repository
+### Structure 
 README.md
 - data
 - gen 
@@ -122,16 +108,17 @@ README.md
   * data-preparation
   * paper
   
-  test
 
 ## About
-Nynke Voermans
-
-Nina Verschuuren
-
-Meggy Lemmens
-
-Amber Kalse
+Members of our team: 
+- Nynke Voermans
+  n.voermans@tilburguniversity.edu
+- Nina Verschuuren
+  n.a.f.verschuuren@tilburguniversity.edu
+- Meggy Lemmens
+  m.m.e.lemmens@tilburguniversity.edu
+- Amber Kalse
+  a.e.s.kalse@tilburguniversity.edu
 
 
 
