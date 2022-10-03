@@ -21,6 +21,17 @@ View(high_inflation_dataset)
 full_dataset_cities <- full_dataset_cities %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
 View(full_dataset_cities)
 
+# see how many NA's are in the variables host_response_time and host_response_rate: 
+# see all possible values of the host_response_time 
+table(low_inflation_dataset$host_response_time)
+table(high_inflation_dataset$host_response_time)
+table(full_dataset_cities$host_response_time)
+
+# see how many NA's are in the variable host_response_rate
+table(low_inflation_dataset$host_response_rate)
+table(high_inflation_dataset$host_response_rate)
+table(full_dataset_cities$host_response_rate)
+
 # Replace the NA's from the variable "host_response_time" by median value: 
 # for low inflation dataset
 low_inflation_dataset['host_response_rate'][low_inflation_dataset['host_response_rate'] == "N/A"] <- NA
@@ -43,11 +54,6 @@ View(high_inflation_dataset)
 table(low_inflation_dataset$host_is_superhost)
 table(high_inflation_dataset$host_is_superhost)
 table(full_dataset_cities$host_is_superhost)
-
-# see all possible values of the host_response_time 
-table(low_inflation_dataset$host_response_time)
-table(high_inflation_dataset$host_response_time)
-table(full_dataset_cities$host_response_time)
 
 
 # Change values of variable "host_response_rate" to numbers and replace missing values by median value: 
@@ -80,5 +86,4 @@ high_inflation_dataset['host_response_time'][high_inflation_dataset['host_respon
 
 high_inflation_dataset$host_response_time[is.na(high_inflation_dataset$host_response_time)] <- median(high_inflation_dataset$host_response_time, na.rm = T)
 View(high_inflation_dataset)
-
 
