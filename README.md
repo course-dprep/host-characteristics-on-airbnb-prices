@@ -120,5 +120,11 @@ README.md
   
   test
 
+## About
+Nynke Voermans
+Nina Verschuuren
+Meggy Lemmens
+Amber Kalse
+
 
 
