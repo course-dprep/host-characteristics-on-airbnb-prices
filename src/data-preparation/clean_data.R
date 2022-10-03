@@ -14,12 +14,12 @@ high_inflation_dataset$host_identity_verified <- ifelse(high_inflation_dataset$h
 full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_is_superhost == "t", 1, 0)
 
 # Subset of important variables, deleting unimportant variables
-low_inflation_dataset <-low_inflation_dataset %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
-View(low_inflation_dataset)
-high_inflation_dataset <-high_inflation_dataset %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
-View(high_inflation_dataset)
-full_dataset_cities <- full_dataset_cities %>% select(9, 11, 12, 15, 16, 18, 25, 26, 40, 75, 76)
-View(full_dataset_cities)
+low_inflation_host_variables <-low_inflation_dataset %>% select(c("host_id", "host_name", "host_since", "host_response_time", "host_response_rate", "host_is_superhost", "host_has_profile_pic", "host_identity_verified", "price", "city_name", "inflation"))
+View(low_inflation_host_variables)
+high_inflation_host_variables <-high_inflation_dataset %>% select(c("host_id", "host_name", "host_since", "host_response_time", "host_response_rate", "host_is_superhost", "host_has_profile_pic", "host_identity_verified", "price", "city_name", "inflation"))
+View(high_inflation_host_variables)
+full_dataset_host_variables <- full_dataset_cities %>% select(c("host_id", "host_name", "host_since", "host_response_time", "host_response_rate", "host_is_superhost", "host_has_profile_pic", "host_identity_verified", "price", "city_name", "inflation"))
+View(full_dataset_host_variables)
 
 # see how many NA's are in the variables host_response_time and host_response_rate: 
 # see all possible values of the host_response_time 
