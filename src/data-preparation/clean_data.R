@@ -53,3 +53,9 @@ View(high_inflation_dataset)
 table(low_inflation_dataset$host_is_superhost)
 table(high_inflation_dataset$host_is_superhost)
 table(full_dataset_cities$host_is_superhost)
+
+# see all possible values of the host_response_time 
+table(low_inflation_dataset$host_response_time)
+table(high_inflation_dataset$host_response_time)
+table(full_dataset_cities$host_response_time)
+
