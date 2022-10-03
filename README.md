@@ -73,21 +73,25 @@ We combined these seperate datasets into three different bigger datasets: one da
 
 ### Variables
 
-| **Variable name**      | **Variable explanation**                           |
-| ---------------------- | -------------------------------------------------- |
-| price                  | Price of the Airbnb                                |
-| host_since             | When the host started the Airbnb                   |
-| host_response_time     | How fast the host responds                         |
-| host_response_rate     | How often the host responds                        |
-| host_is_superhost      | Dummy whether the host is a superhost              |
-| host_has_profile_pic   | Dummy whether the host has a profile pic           |
-| host_identity_verified | Dummy whether the identity of the host is verified |
+| **Variable name**             | **Variable explanation**                           |
+| ----------------------------- |----------------------------------------------------|
+| price                   (p)   | Price of the Airbnb                                |
+| host_since              (hs)  | When the host started the Airbnb                   |
+| host_response_time      (hrt) | How fast the host responds                         |
+| host_response_rate      (hrr) | How often the host responds                        |
+| host_is_superhost       (his) | Dummy whether the host is a superhost              |
+| host_has_profile_pic    (hhpp)| Dummy whether the host has a profile pic           |
+| host_identity_verified  (hidv)| Dummy whether the identity of the host is verified |
 
 
 ### Research method
 
-This project will use the OLS regression method to examine the price determinants of Airbnb's in Amsterdam. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price. The independent variables will be host_since, host_response_time, host_response_rate, host_is_superhost, host_has_profile_pic and host_identity_verified. Therefore, the linear regression will be:
-price = B0 + B1 * host_since + B2 * host_response_time + B3 * host_response_rate + B4 * host_is_superhost + B5 * host_has_profile_pic + B6 * host_identity_verified. Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
+This project will use the OLS regression method to examine the price determinants of Airbnb's in Amsterdam. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price. The independent variables are given in the table above. The regression is as follows:
+
+*p = B0 + B1 * hs + B2 * hrt + B3 * hrr + B4 * his + B5 * hhpp + B6 * hidv *
+
+
+Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
 
 
 ## 3. Data 
@@ -122,8 +126,11 @@ README.md
 
 ## About
 Nynke Voermans
+
 Nina Verschuuren
+
 Meggy Lemmens
+
 Amber Kalse
 
 
