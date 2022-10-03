@@ -41,54 +41,34 @@ table(full_dataset_host_variables$host_response_rate)
 low_inflation_host_variables$host_response_time_recoded <- low_inflation_host_variables$host_response_time # first we make a clone and then we are going to change the clone
 high_inflation_host_variables$host_response_time_recoded <- high_inflation_host_variables$host_response_time
 full_dataset_host_variables$host_response_time_recoded <- full_dataset_host_variables$host_response_time
+View(high_inflation_host_variables)
 
-# Change values of variable "host_response_rate" to numbers and replace missing values by median value: 
-# for low inflation dataset
-low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time'] == "within an hour"] <- 1
-low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time'] == "within a few hours"] <- 2
-low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time'] == "within a day"] <- 3
-low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time'] == "a few days or more"] <- 4
-low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time'] == "N/A"] <- NA
 
+# add a new variable host_response_rate_recoded
+low_inflation_host_variables$host_response_rate_recoded <- low_inflation_host_variables$host_response_rate # first we make a clone and then we are going to change the clone
+high_inflation_host_variables$host_response_rate_recoded <- high_inflation_host_variables$host_response_rate
+full_dataset_host_variables$host_response_rate_recoded <- full_dataset_host_variables$host_response_rate
+View(high_inflation_host_variables)
+
+
+
+
+## NA's 
+
+# Replace NA's "host_response_time" to median value
 low_inflation_dataset$host_response_time[is.na(low_inflation_dataset$host_response_time)] <- median(low_inflation_dataset$host_response_time, na.rm = T)
-View(low_inflation_dataset)
-
-
-# for full dataset
-full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time'] == "within an hour"] <- 1
-full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time'] == "within a few hours"] <- 2
-full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time'] == "within a day"] <- 3
-full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time'] == "a few days or more"] <- 4
-full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time'] == "N/A"] <- NA
-
 full_dataset_cities$host_response_time[is.na(full_dataset_cities$host_response_time)] <- median(full_dataset_cities$host_response_time, na.rm = T)
-View(full_dataset_cities)
-
-
-# for high inflation dataset
-high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time'] == "within an hour"] <- 1
-high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time'] == "within a few hours"] <- 2
-high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time'] == "within a day"] <- 3
-high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time'] == "a few days or more"] <- 4
-high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time'] == "N/A"] <- NA
-
 high_inflation_dataset$host_response_time[is.na(high_inflation_dataset$host_response_time)] <- median(high_inflation_dataset$host_response_time, na.rm = T)
-View(high_inflation_dataset)
 
-# Replace the NA's from the variable "host_response_time" by median value: 
-# for low inflation dataset
+# Replace the NA's from the variable "host_response_rate" by median value: 
 low_inflation_host_variables['host_response_rate'][low_inflation_host_variables['host_response_rate'] == "N/A"] <- NA
 low_inflation_host_variables$host_response_rate[is.na(low_inflation_host_variables$host_response_rate)] <- median(low_inflation_host_variables$host_response_rate, na.rm = T)
 View(low_inflation_host_variables)
 
-
-# for full dataset
 full_dataset_host_variables['host_response_rate'][full_dataset_host_variables['host_response_rate'] == "N/A"] <- NA
 full_dataset_host_variables$host_response_rate[is.na(full_dataset_host_variables$host_response_rate)] <- median(full_dataset_host_variables$host_response_rate, na.rm = T)
 View(full_dataset_host_variables)
 
-
-# for high inflation dataset
 high_inflation_host_variables['host_response_rate'][high_inflation_host_variables['host_response_rate'] == "N/A"] <- NA
 high_inflation_host_variables$host_response_rate[is.na(high_inflation_host_variables$host_response_rate)] <- median(high_inflation_host_variables$host_response_rate, na.rm = T)
 View(high_inflation_host_variables)
