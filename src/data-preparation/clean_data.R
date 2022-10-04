@@ -43,6 +43,27 @@ high_inflation_host_variables$host_response_time_recoded <- high_inflation_host_
 full_dataset_host_variables$host_response_time_recoded <- full_dataset_host_variables$host_response_time
 View(high_inflation_host_variables)
 
+# Edit the new recoded response time to numeric values
+# for low inflation 
+low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
+low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
+low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "N/A"] <- NA
+View(low_inflation_host_variables)
+
+# for full dataset
+full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
+full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
+full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "N/A"] <- NA
+View(full_dataset_host_variables)
+
+# for high inflation dataset
+high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
+high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
+high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "N/A"] <- NA
+
 
 # add a new variable host_response_rate_recoded
 low_inflation_host_variables$host_response_rate_recoded <- low_inflation_host_variables$host_response_rate # first we make a clone and then we are going to change the clone
@@ -50,11 +71,17 @@ high_inflation_host_variables$host_response_rate_recoded <- high_inflation_host_
 full_dataset_host_variables$host_response_rate_recoded <- full_dataset_host_variables$host_response_rate
 View(high_inflation_host_variables)
 
+# Convert percentages of this variable to numerical values of 0 - 1.00
+low_inflation_host_variables$host_response_rate_recoded <- as.numeric(sub("%", "", low_inflation_host_variables$host_response_rate_recoded))/100
+high_inflation_host_variables$host_response_rate_recoded <- as.numeric(sub("%", "", high_inflation_host_variables$host_response_rate_recoded))/100
+full_dataset_host_variables$host_response_rate_recoded <- as.numeric(sub("%", "", full_dataset_host_variables$host_response_rate_recoded))/100
+View(low_inflation_host_variables)
+View(high_inflation_host_variables)
+View(full_dataset_host_variables)
 
 
-
-## NA's 
-
+## NA's --> Search for possibilities to handle these missing valyues
+# optional: 
 # Replace NA's "host_response_time" to median value
 low_inflation_dataset$host_response_time[is.na(low_inflation_dataset$host_response_time)] <- median(low_inflation_dataset$host_response_time, na.rm = T)
 full_dataset_cities$host_response_time[is.na(full_dataset_cities$host_response_time)] <- median(full_dataset_cities$host_response_time, na.rm = T)
