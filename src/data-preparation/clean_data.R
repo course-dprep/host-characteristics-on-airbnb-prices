@@ -106,3 +106,20 @@ high_inflation_host_variables_without_NA <- na.omit(high_inflation_host_variable
 full_dataset_host_variables_without_NA <- na.omit(full_dataset_host_variables)
 
 
+####### CHANGE HOST_SINCE INTO YEARS #######
+low_inflation_host_variables_without_NA$host_since_recoded <- low_inflation_host_variables_without_NA$host_since
+high_inflation_host_variables_without_NA$host_since_recoded <- high_inflation_host_variables_without_NA$host_since
+full_dataset_host_variables_without_NA$host_since_recoded <- full_dataset_host_variables_without_NA$host_since
+
+# make a substring with only the years and turn this into a number
+low_inflation_host_variables_without_NA$host_since_recoded <- substr(low_inflation_host_variables_without_NA$host_since_recoded, 0, 4)
+high_inflation_host_variables_without_NA$host_since_recoded <- substr(high_inflation_host_variables_without_NA$host_since_recoded, 0, 4)
+full_dataset_host_variables_without_NA$host_since_recoded <- substr(full_dataset_host_variables_without_NA$host_since_recoded, 0, 4)
+
+low_inflation_host_variables_without_NA$host_since_recoded <- as.numeric(low_inflation_host_variables_without_NA$host_since_recoded)
+high_inflation_host_variables_without_NA$host_since_recoded <- as.numeric(high_inflation_host_variables_without_NA$host_since_recoded)
+full_dataset_host_variables_without_NA$host_since_recoded <- as.numeric(full_dataset_host_variables_without_NA$host_since_recoded)
+
+low_inflation_host_variables_without_NA$host_years <- 2022 - low_inflation_host_variables_without_NA$host_since_recoded
+high_inflation_host_variables_without_NA$host_years <- 2022 - high_inflation_host_variables_without_NA$host_since_recoded
+full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_variables_without_NA$host_since_recoded
