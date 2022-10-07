@@ -123,3 +123,16 @@ full_dataset_host_variables_without_NA$host_since_recoded <- as.numeric(full_dat
 low_inflation_host_variables_without_NA$host_years <- 2022 - low_inflation_host_variables_without_NA$host_since_recoded
 high_inflation_host_variables_without_NA$host_years <- 2022 - high_inflation_host_variables_without_NA$host_since_recoded
 full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_variables_without_NA$host_since_recoded
+
+####### CHECK AND REMOVE DUPLICATES #######
+# Check whether there are duplicates in the data set
+duplicated(low_inflation_host_variables_without_NA)
+duplicated(high_inflation_host_variables_without_NA)
+duplicated(full_dataset_host_variables_without_NA)
+
+# Remove the duplicates 
+low_inflation_without_dup <- low_inflation_host_variables_without_NA %>% distinct()
+high_inflation_without_dup <- high_inflation_host_variables_without_NA %>% distinct()
+full_dataset_without_dup <- full_dataset_host_variables_without_NA %>% distinct()
+
+
