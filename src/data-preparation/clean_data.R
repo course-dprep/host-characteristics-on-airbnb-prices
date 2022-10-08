@@ -132,3 +132,14 @@ full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_va
 ####### SEE IF EVERYTHING WORKED #######
 View(low_inflation_host_variables_without_NA)
 View(high_inflation_host_variables_without_NA)
+
+####### CHECK AND REMOVE DUPLICATES #######
+# Check whether there are duplicates in the data set
+duplicated(low_inflation_host_variables_without_NA)
+duplicated(high_inflation_host_variables_without_NA)
+duplicated(full_dataset_host_variables_without_NA)
+
+# Remove the duplicates 
+low_inflation_without_dup <- low_inflation_host_variables_without_NA %>% distinct()
+high_inflation_without_dup <- high_inflation_host_variables_without_NA %>% distinct()
+full_dataset_without_dup <- full_dataset_host_variables_without_NA %>% distinct()
