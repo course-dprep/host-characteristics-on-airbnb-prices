@@ -18,7 +18,7 @@ full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_id
 # see all possible values of the dummies to test if it worked
 table(low_inflation_host_variables $host_has_profile_pic)
 table(high_inflation_dataset$host_is_superhost)
-table(full_dataset_cities$host_is_superhost)
+table(full_dataset_cities$host_identity_verified)
 
 
 
@@ -47,13 +47,16 @@ View(high_inflation_host_variables)
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "a few days or more"] <- 4
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "N/A"] <- NA
 View(low_inflation_host_variables)
+table(low_inflation_host_variables$host_response_time_recoded)
 
 # for full dataset
 full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
 full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
 full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "a few days or more"] <- 4
 full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "N/A"] <- NA
 View(full_dataset_host_variables)
 
@@ -61,6 +64,7 @@ View(full_dataset_host_variables)
 high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
 high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within a few hours"] <- 2
 high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "within a day"] <- 3
+high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "a few days or more"] <- 4
 high_inflation_host_variables['host_response_time_recoded'][high_inflation_host_variables['host_response_time_recoded'] == "N/A"] <- NA
 
 
@@ -123,3 +127,8 @@ full_dataset_host_variables_without_NA$host_since_recoded <- as.numeric(full_dat
 low_inflation_host_variables_without_NA$host_years <- 2022 - low_inflation_host_variables_without_NA$host_since_recoded
 high_inflation_host_variables_without_NA$host_years <- 2022 - high_inflation_host_variables_without_NA$host_since_recoded
 full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_variables_without_NA$host_since_recoded
+
+
+####### SEE IF EVERYTHING WORKED #######
+View(low_inflation_host_variables_without_NA)
+View(high_inflation_host_variables_without_NA)
