@@ -1,29 +1,4 @@
-####### DUMMY ####### 
-# Make dummy of the variable "host_is_superhost"
-low_inflation_dataset$host_is_superhost <- ifelse(low_inflation_dataset$host_is_superhost == "t", 1, 0)
-high_inflation_dataset$host_is_superhost <- ifelse(high_inflation_dataset$host_is_superhost == "t", 1, 0)
-full_dataset_cities$host_is_superhost <- ifelse(full_dataset_cities$host_is_superhost == "t", 1, 0)
-View(low_inflation_dataset)
-
-# Make dummy of the variable "host_has_profile_pic" 
-low_inflation_dataset$host_has_profile_pic <- ifelse(low_inflation_dataset$host_has_profile_pic == "t", 1, 0)
-high_inflation_dataset$host_has_profile_pic <- ifelse(high_inflation_dataset$host_has_profile_pic == "t", 1, 0)
-full_dataset_cities$host_has_profile_pic <- ifelse(full_dataset_cities$host_has_profile_pic == "t", 1, 0)
-
-# Make dummy of the variable "host_identity_verified"
-low_inflation_dataset$host_identity_verified <- ifelse(low_inflation_dataset$host_identity_verified == "t", 1, 0)
-high_inflation_dataset$host_identity_verified <- ifelse(high_inflation_dataset$host_identity_verified == "t", 1, 0)
-full_dataset_cities$host_identity_verified <- ifelse(full_dataset_cities$host_identity_verified == "t", 1, 0)
-
-# see all possible values of the dummies to test if it worked
-table(low_inflation_host_variables $host_has_profile_pic)
-table(high_inflation_dataset$host_is_superhost)
-table(full_dataset_cities$host_identity_verified)
-
-
-
-####### SUBSET ####### 
-
+####### SUBSET OF THE VARIABLES NEEDED ####### 
 # Subset of important variables, deleting unimportant variables
 low_inflation_host_variables <-low_inflation_dataset %>% select(c("host_id", "host_name", "host_since", "host_response_time", "host_response_rate", "host_is_superhost", "host_has_profile_pic", "host_identity_verified", "price", "city_name", "inflation"))
 View(low_inflation_host_variables)
@@ -32,6 +7,28 @@ View(high_inflation_host_variables)
 full_dataset_host_variables <- full_dataset_cities %>% select(c("host_id", "host_name", "host_since", "host_response_time", "host_response_rate", "host_is_superhost", "host_has_profile_pic", "host_identity_verified", "price", "city_name", "inflation"))
 View(full_dataset_host_variables)
 
+
+####### CREATE DUMMY VARIABLES FOR THE BOOLEAN VARIABLES ####### 
+# Make dummy of the variable "host_is_superhost"
+low_inflation_host_variables$host_is_superhost <- ifelse(low_inflation_host_variables$host_is_superhost == "t", 1, 0)
+high_inflation_host_variables$host_is_superhost <- ifelse(high_inflation_host_variables$host_is_superhost == "t", 1, 0)
+full_dataset_host_variables$host_is_superhost <- ifelse(full_dataset_host_variables$host_is_superhost == "t", 1, 0)
+View(low_inflation_dataset)
+
+# Make dummy of the variable "host_has_profile_pic" 
+low_inflation_host_variables$host_has_profile_pic <- ifelse(low_inflation_host_variables$host_has_profile_pic == "t", 1, 0)
+high_inflation_host_variables$host_has_profile_pic <- ifelse(high_inflation_host_variables$host_has_profile_pic == "t", 1, 0)
+full_dataset_host_variables$host_has_profile_pic <- ifelse(full_dataset_host_variables$host_has_profile_pic == "t", 1, 0)
+
+# Make dummy of the variable "host_identity_verified"
+low_inflation_host_variables$host_identity_verified <- ifelse(low_inflation_host_variables$host_identity_verified == "t", 1, 0)
+high_inflation_host_variables$host_identity_verified <- ifelse(high_inflation_host_variables$host_identity_verified == "t", 1, 0)
+full_dataset_host_variables$host_identity_verified <- ifelse(full_dataset_host_variables$host_identity_verified == "t", 1, 0)
+
+# see all possible values of the dummies to test if it worked
+table(low_inflation_host_variables$host_has_profile_pic)
+table(high_inflation_host_variables$host_is_superhost)
+table(full_dataset_host_variables$host_identity_verified)
 
 
 ####### RECODING VARIABLES ####### 
@@ -50,7 +47,7 @@ low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_va
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "a few days or more"] <- 4
 low_inflation_host_variables['host_response_time_recoded'][low_inflation_host_variables['host_response_time_recoded'] == "N/A"] <- NA
 View(low_inflation_host_variables)
-table(low_inflation_host_variables$host_response_time_recoded)
+table(low_inflation_host_variables$host_response_time_recoded) # checks if it worked
 
 # for full dataset
 full_dataset_host_variables['host_response_time_recoded'][full_dataset_host_variables['host_response_time_recoded'] == "within an hour"] <- 1
@@ -104,34 +101,36 @@ table(low_inflation_host_variables$host_response_rate)
 table(high_inflation_host_variables$host_response_rate)
 table(full_dataset_host_variables$host_response_rate)
 
-####### REMOVE NA ####### 
+### REMOVE NA ###
 low_inflation_host_variables_without_NA <- na.omit(low_inflation_host_variables)
 high_inflation_host_variables_without_NA <- na.omit(high_inflation_host_variables)
 full_dataset_host_variables_without_NA <- na.omit(full_dataset_host_variables)
 
 
 ####### CHANGE HOST_SINCE INTO YEARS #######
-low_inflation_host_variables_without_NA$host_since_recoded <- low_inflation_host_variables_without_NA$host_since
+low_inflation_host_variables_without_NA$host_since_recoded <- low_inflation_host_variables_without_NA$host_since # first we make a clone and then we are going to change the clone
 high_inflation_host_variables_without_NA$host_since_recoded <- high_inflation_host_variables_without_NA$host_since
 full_dataset_host_variables_without_NA$host_since_recoded <- full_dataset_host_variables_without_NA$host_since
 
-# make a substring with only the years and turn this into a number
+# make a substring with only the years (first 4 icons of each observation)
 low_inflation_host_variables_without_NA$host_since_recoded <- substr(low_inflation_host_variables_without_NA$host_since_recoded, 0, 4)
 high_inflation_host_variables_without_NA$host_since_recoded <- substr(high_inflation_host_variables_without_NA$host_since_recoded, 0, 4)
 full_dataset_host_variables_without_NA$host_since_recoded <- substr(full_dataset_host_variables_without_NA$host_since_recoded, 0, 4)
 
+# turn these first 4 icons into a number
 low_inflation_host_variables_without_NA$host_since_recoded <- as.numeric(low_inflation_host_variables_without_NA$host_since_recoded)
 high_inflation_host_variables_without_NA$host_since_recoded <- as.numeric(high_inflation_host_variables_without_NA$host_since_recoded)
 full_dataset_host_variables_without_NA$host_since_recoded <- as.numeric(full_dataset_host_variables_without_NA$host_since_recoded)
 
+# subtract this number from 2022 to know how many years the hist is active
 low_inflation_host_variables_without_NA$host_years <- 2022 - low_inflation_host_variables_without_NA$host_since_recoded
 high_inflation_host_variables_without_NA$host_years <- 2022 - high_inflation_host_variables_without_NA$host_since_recoded
 full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_variables_without_NA$host_since_recoded
 
-
-####### SEE IF EVERYTHING WORKED #######
+### SEE IF EVERYTHING WORKED ###
 View(low_inflation_host_variables_without_NA)
 View(high_inflation_host_variables_without_NA)
+
 
 ####### CHECK AND REMOVE DUPLICATES #######
 # Check whether there are duplicates in the data set
