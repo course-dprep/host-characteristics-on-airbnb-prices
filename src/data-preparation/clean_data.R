@@ -161,3 +161,59 @@ table(low_inflation_without_dup$host_years)
 table(low_inflation_without_dup$host_is_superhost)
 table(low_inflation_without_dup$price_in_dollars)
 table(low_inflation_without_dup$host_response_time_recoded)
+
+
+
+####### CONVERT PRICES INTO THE RIGHT CURRENCIES #######
+library(dplyr)
+### low inflation
+table(low_inflation_without_dup$city_name)
+# tokyo
+low_inflation_without_dup <- low_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "tokyo", price_in_dollars*0.0068789, price_in_dollars))
+# bangkok
+low_inflation_without_dup <- low_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "bankok", price_in_dollars*0.027, price_in_dollars))
+# beijing
+low_inflation_without_dup <- low_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "beijing", price_in_dollars*0.1406238, price_in_dollars))
+# athens
+low_inflation_without_dup <- low_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "athens", price_in_dollars*0.97, price_in_dollars))
+# geneva
+low_inflation_without_dup <- low_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "geneva", price_in_dollars*0.97, price_in_dollars))
+
+### high inflation
+table(high_inflation_without_dup$city_name)
+# capetown
+high_inflation_without_dup <- high_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "capetown", price_in_dollars*0.0558582, price_in_dollars))
+# mexico
+high_inflation_without_dup <- high_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "mexico", price_in_dollars*0.05, price_in_dollars))
+# rio de janeiro
+high_inflation_without_dup <- high_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "rio", price_in_dollars*0.192311, price_in_dollars))
+# santiago
+high_inflation_without_dup <- high_inflation_without_dup %>% mutate(price_in_dollars = if_else(city_name == "santiago", price_in_dollars*0.0010657672, price_in_dollars))
+
+### full dataset:
+# tokyo
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "tokyo", price_in_dollars*0.0068789, price_in_dollars))
+# bangkok
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "bankok", price_in_dollars*0.027, price_in_dollars))
+# beijing
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "beijing", price_in_dollars*0.1406238, price_in_dollars))
+# athens
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "athens", price_in_dollars*0.97, price_in_dollars))
+# geneva
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "geneva", price_in_dollars*0.97, price_in_dollars))
+# capetown
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "capetown", price_in_dollars*0.0558582, price_in_dollars))
+# mexico
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "mexico", price_in_dollars*0.05, price_in_dollars))
+# rio de janeiro
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "rio", price_in_dollars*0.192311, price_in_dollars))
+# santiago
+full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars = if_else(city_name == "santiago", price_in_dollars*0.0010657672, price_in_dollars))
+
+mean(full_dataset_without_dup$price_in_dollars)
+
+
+
+
+
+
