@@ -143,3 +143,22 @@ duplicated(full_dataset_host_variables_without_NA)
 low_inflation_without_dup <- low_inflation_host_variables_without_NA %>% distinct()
 high_inflation_without_dup <- high_inflation_host_variables_without_NA %>% distinct()
 full_dataset_without_dup <- full_dataset_host_variables_without_NA %>% distinct()
+
+
+####### CHANGE THE TYPE OF SOME VARIABLES #######
+# make price_in_dollars numeric
+library(readr)
+low_inflation_without_dup$price_in_dollars <- parse_number(low_inflation_without_dup$price_in_dollars)
+high_inflation_without_dup$price_in_dollars <- parse_number(high_inflation_without_dup$price_in_dollars)
+full_dataset_without_dup$price_in_dollars <- parse_number(full_dataset_without_dup$price_in_dollars)
+
+# make host_response_time_recoded numeric
+low_inflation_without_dup$host_response_time_recoded <- as.numeric(low_inflation_without_dup$host_response_time_recoded)
+high_inflation_without_dup$host_response_time_recoded <- as.numeric(high_inflation_without_dup$host_response_time_recoded)
+full_dataset_without_dup$host_response_time_recoded <- as.numeric(full_dataset_without_dup$host_response_time_recoded)
+
+##Check if all the variables are right
+table(low_inflation_without_dup$host_years)
+table(low_inflation_without_dup$host_is_superhost)
+table(low_inflation_without_dup$price_in_dollars)
+table(low_inflation_without_dup$host_response_time_recoded)
