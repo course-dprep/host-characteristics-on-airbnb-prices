@@ -92,9 +92,9 @@ Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dum
 ## 3. Results and interpretation
 We created three linear regressions from three different data sets to analyze the results of the study. Using these regressions, we can see if host characteristics (independent variables) have an impact on the price of Airbnb's (dependent variables). The output of the regressions can be found below: 
 
--table-
+![Schermafbeelding 2022-10-10 om 12 03 39](https://user-images.githubusercontent.com/112611059/194842123-fe4c1d5b-be2c-4c5b-bbb9-a3abb6c81e1f.png)
 
-The results of the low inflation regression show that the host_identity_verified, host_response_time_recoded and host_years have a significant effect on the price. Host_identity_verified has a positive effect on the price of cities with low inflation. This indicates that when the host is identified the price goes up by $45.68. However, the host_response_time_recoded and host_years have a negative effect on the price. This means that when the host response time goes up, the price goes down by $7.14. Furthermore, it shows that if the host has been a host for a longer time, the price goes down by $8.04. 
+The results of the low inflation regression (1) show that the host_identity_verified, host_response_time_recoded and host_years have a significant effect on the price. Host_identity_verified has a positive effect on the price of cities with low inflation. This indicates that when the host is identified the price goes up by $45.68. However, the host_response_time_recoded and host_years have a negative effect on the price. This means that when the host response time goes up, the price goes down by $7.14. Furthermore, it shows that if the host has been a host for a longer time, the price goes down by $8.04. 
 
 ## 4. Repository
 
