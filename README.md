@@ -117,7 +117,9 @@ README.md
   * analysis
   * data-preparation
   * paper
-  
+
+## 5. Running instructions
+avcp
 
 ## About
 Members of our team: 
