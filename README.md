@@ -26,10 +26,10 @@ Therefore, people start looking more critically at different features of Airbnbâ
 will investigate the effect of host characteristics on Airbnb prices. 
 
 Due to recent high inflation rates, it is interesting to compare this effect of host characteristics on price between cities with low inflation and cities with high
-inflation. Current inflation in many parts of the world is increasing. This inflation is due to many economies recovering from the COVID recession in 2020.
-Additionally this inflation is due to the rising gas prices. This research will use two city subsets namely, a subset of five cities with high inflation rates
+inflation. Currently, inflation in many parts of the world is increasing. This inflation is due to many economies recovering from the COVID recession in 2020.
+Additionally this inflation is due to the rising gas prices. This research will use two city subsets, namely a subset of five cities with high inflation rates
 consisting of: Rio de Janeiro, Mexico City, Boston, Cape Town and Santiago. The subset of five cities with low inflation, consisting out of: Tokyo, Geneva, Beijing,
-Bangkok and Athens. To what extent does inflation moderate the effect of host characteristics on the Airbnb prices in these countries? 
+Bangkok and Athens. These cities were selected based on inflation data from the past few years from (https://www.theglobaleconomy.com/rankings/inflation/).  To what extent does inflation moderate the effect of host characteristics on the Airbnb prices in these countries? 
 
 
 ### Research question
