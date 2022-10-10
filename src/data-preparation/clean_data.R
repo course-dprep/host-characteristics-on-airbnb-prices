@@ -212,8 +212,9 @@ full_dataset_without_dup <- full_dataset_without_dup %>% mutate(price_in_dollars
 
 mean(full_dataset_without_dup$price_in_dollars)
 
-
-
-
+# round prices to 2 decimals
+low_inflation_without_dup$price_in_dollars <- round(low_inflation_without_dup$price_in_dollars, digits=2)
+high_inflation_without_dup$price_in_dollars <- round(high_inflation_without_dup$price_in_dollars, digits=2)
+full_dataset_without_dup$price_in_dollars <- round(full_dataset_without_dup$price_in_dollars, digits=2)
 
 
