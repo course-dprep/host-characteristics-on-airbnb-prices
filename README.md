@@ -1,4 +1,6 @@
-# Are hosts influencing the price?
+# The effect of host characteristics on price 
+
+### Are host characteristics influencing the price?
 
 ## Table of content
 [1. Our project](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#1-our-project)
@@ -14,8 +16,16 @@
 [3. Results and interpretation](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#results-and-interpretation)
 
 [4. Repository](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#4-repository)
-- [Contents](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#contents)
 - [Structure](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#structure)
+
+[5. Running instructions](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#5-running-instructions))
+- [Software](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#software)
+- [Running the code](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#running-the-code)
+
+[6. More resources](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#more-resources)
+
+[7. About](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#about)
+
 
 ## 1. Our project
 
@@ -30,7 +40,6 @@ inflation. Currently, inflation in many parts of the world is increasing. This i
 Additionally this inflation is due to the rising gas prices. This research will use two city subsets, namely a subset of five cities with high inflation rates
 consisting of: Rio de Janeiro, Mexico City, Boston, Cape Town and Santiago. The subset of five cities with low inflation, consisting out of: Tokyo, Geneva, Beijing,
 Bangkok and Athens. These cities were selected based on inflation data from the past few years from (https://www.theglobaleconomy.com/rankings/inflation/).  To what extent does inflation moderate the effect of host characteristics on the Airbnb prices in these countries? 
-
 
 ### Research question
 
@@ -80,7 +89,6 @@ We combined these seperate datasets into three different bigger datasets: one da
 | host_has_profile_pic               (X5)  | Dummy whether the host has a profile pic           |
 | host_identity_verified             (X6)  | Dummy whether the identity of the host is verified |
 
-
 ### Research method
 
 This project will use the OLS regression method to examine the effect of different host characteristics of Airbnb's in low and high inflation countries. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price in dollars. The independent variables are given in the table above. The regression is as follows:
@@ -88,6 +96,7 @@ This project will use the OLS regression method to examine the effect of differe
 *Y = b0 + b1X1 + b2X2 + b3X3 + b4X4 + b5X5 + b6X6*
 
 Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
+
 
 ## 3. Results and interpretation
 To investigate the effect of host characteristics (independent variables) on prices (dependent variable) between cities with low inflation or high inflation, we conducted a linear regression for the low inflation, high inflation and full datasests. The output of the regressions can be found below: 
@@ -102,27 +111,40 @@ When comparing the results of low inflation cities with high inflation cities, w
 
 The results of the full dataset regression (3) show the overall effect of host characteristics on Airbnb's price. Generally, four out of six characteristics have a significant effect on price. Thus, we can conclude from this study that host characteristics have an effect on prices. However, in the high inflation cities, host characteristics have a higher effect than in the low inflation cities. 
 
-## 4. Repository
 
-### Contents
+## 4. Repository overview
 
 ### Structure 
-README.md
-- data
-- gen 
-  * analysis
-  * data-preparation
-  * paper
-- src
-  * analysis
-  * data-preparation
-  * paper
+├── README.md
+├── data
+├── gen
+│   ├── analysis
+│   ├── data-preparation
+│   └── paper
+└── src
+    ├── analysis
+    ├── data-preparation
+    └── paper
+
 
 ## 5. Running instructions
-avcp
+Explain to potential users how to run/replicate your workflow. If necessary, touch upon the required input data, which secret credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. --> avcp
 
-## About
-Members of our team: 
+### Software
+- Make: [Click here to see how to install Make] (https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
+- R and RStudio: [Click here to see how to install R and RStudio] (https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
+
+### Running the code
+
+NOG TOEVOEGEN 
+
+
+## 6. More rescources
+- https://www.theglobaleconomy.com/rankings/inflation/
+
+
+## 7. About
+This project is conducted for the Data Preparation and Workflow Management course at Tilburg University. The members of our team are:
 - Nynke Voermans
   n.voermans@tilburguniversity.edu
 - Nina Verschuuren
