@@ -88,6 +88,12 @@ high_inflation_host_variables$price_in_dollars <- gsub("\\$", "", high_inflation
 full_dataset_host_variables$price_in_dollars <- gsub("\\$", "", full_dataset_host_variables$price)
 
 
+#write csv
+write_csv(low_inflation_host_variables, "../team-assignment-team-6/gen/data-preparation/temp/low_inflation_host_variables.csv")
+write_csv(high_inflation_host_variables, "../team-assignment-team-6/gen/data-preparation/temp/high_inflation_host_variables.csv")
+write_csv(full_dataset_host_variables, "../team-assignment-team-6/gen/data-preparation/temp/full_dataset_host_variables.csv")
+
+
 
 ####### NA ####### 
 # see how many NA's are in the variables host_response_time and host_response_rate: 
@@ -130,6 +136,15 @@ full_dataset_host_variables_without_NA$host_years <- 2022 - full_dataset_host_va
 ### SEE IF EVERYTHING WORKED ###
 View(low_inflation_host_variables_without_NA)
 View(high_inflation_host_variables_without_NA)
+
+
+# write csv
+write_csv(low_inflation_host_variables_without_NA, "../team-assignment-team-6/gen/data-preparation/temp/low_inflation_host_variables_without_NA.csv")
+write_csv(high_inflation_host_variables_without_NA, "../team-assignment-team-6/gen/data-preparation/temp/high_inflation_host_variables_without_NA.csv")
+write_csv(full_dataset_host_variables_without_NA, "../team-assignment-team-6/gen/data-preparation/temp/full_dataset_host_variables_without_NA.csv")
+
+
+
 
 
 ####### CHECK AND REMOVE DUPLICATES #######
