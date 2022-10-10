@@ -1,3 +1,16 @@
+
+all: analysis data-preparation
+
+data-preparation: 
+		make -C src/data-preparation
+		
+analysis: data-preparation
+		make -C src/analysis
+
+
+
+
+
 # Notes: 
 # - If run on unix system, use rm instead of del command in clean  
 # - Careful with spaces! If use \ to split to multiple lines, cannot have a space after \ 
