@@ -90,6 +90,11 @@ This project will use the OLS regression method to examine the price determinant
 Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
 
 ## 3. Results and interpretation
+We created three linear regressions from three different data sets to analyze the results of the study. Using these regressions, we can see if host characteristics (independent variables) have an impact on the price of Airbnb's (dependent variables). The output of the regressions can be found below: 
+
+-table-
+
+The results of the low inflation regression show that the host_identity_verified, host_response_time_recoded and host_years have a significant effect on the price. Host_identity_verified has a positive effect on the price of cities with low inflation. This indicates that when the host is identified the price goes up by $45.68. However, the host_response_time_recoded and host_years have a negative effect on the price. This means that when the host response time goes up, the price goes down by $7.14. Furthermore, it shows that if the host has been a host for a longer time, the price goes down by $8.04. 
 
 ## 4. Repository
 
