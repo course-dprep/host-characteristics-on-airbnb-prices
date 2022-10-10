@@ -95,6 +95,8 @@ This project will use the OLS regression method to examine the effect of differe
 
 *Y = b0 + b1X1 + b2X2 + b3X3 + b4X4 + b5X5 + b6X6*
 
+DIT MET DIE X NOG AANPASSEN OF LATEN WE DIT? 
+
 Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dummy variables.
 
 
@@ -116,25 +118,15 @@ The results of the full dataset regression (3) show the overall effect of host c
 
 ### Structure 
 ├── README.md
-
 ├── data
-
 ├── gen
-
 │   ├── analysis
-
 │   ├── data-preparation
-
 │   └── paper
-
 └── src
-
     ├── analysis
-    
     ├── data-preparation
-    
     └── paper
-
 
 ## 5. Running instructions
 Explain to potential users how to run/replicate your workflow. If necessary, touch upon the required input data, which secret credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. --> avcp
