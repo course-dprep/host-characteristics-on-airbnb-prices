@@ -37,8 +37,8 @@ Bangkok and Athens. These cities were selected based on inflation data from the 
 What is the effect of different host characteristics on Airbnb prices, moderated by high or low inflation?
 
 4 different subquestions:
-1. What is the effect of different host characteristics on Airbnb prices in cities with high inflation?
-2. What is the effect of different host characteristics on Airbnb prices in cities with low inflation?
+1. What is the effect of different host characteristics on Airbnb prices in cities with low inflation?
+2. What is the effect of different host characteristics on Airbnb prices in cities with high inflation?
 3. What is the difference between the effect of different host characteristics on Airbnb prices in cities with high inflation and cities with low inflation?
 4. What is the general effect of different host characteristics on Airbnb prices?
 
@@ -52,13 +52,6 @@ What is the effect of different host characteristics on Airbnb prices, moderated
 
 In our research, we decided that we want to compare the effect of host characteristics on prices between cities with high inflation and cities with low inflation. To select the cities included in the dataset, we used an overview of inflation by country around the world in the past years from The Global Economy (https://www.theglobaleconomy.com/rankings/inflation/). We compared these countries with the cities of which datasets were available, and selected the following cities:
 
-Cities with high inflation:
-1. Rio de Janeiro, Brazil
-2. Mexico City, Mexico
-3. Boston, United States
-4. Cape Town, South Africa
-5. Santiago, Chile
-
 Cities with low inflation:
 1. Tokyo, Japan
 2. Geneva, Switzerland
@@ -66,7 +59,14 @@ Cities with low inflation:
 4. Bangkok, Thailand
 5. Athens, Greece
 
-We combined these seperate datasets into three different bigger datasets: one dataset with all information about the cities with high inflation, one dataset with all information about the cities with low inflation and one general dataset with all information of all cities. The seperate high inflation and low inflation datasets can be used to compare the difference of host characteristics on prices of Airbnb's. The general dataset with all cities included can be used to create a general overview of the effects of different host characteristics on prices of Airbnb's. Later, we will clean these datasets so they can be easily used in our analysis.
+Cities with high inflation:
+1. Rio de Janeiro, Brazil
+2. Mexico City, Mexico
+3. Boston, United States
+4. Cape Town, South Africa
+5. Santiago, Chile
+
+We combined these seperate datasets into three different bigger datasets: one dataset with all information about the cities with low inflation, one dataset with all information about the cities with high inflation and one general dataset with all information of all cities. The seperate low inflation and high inflation datasets can be used to compare the difference of host characteristics on prices of Airbnb's. The general dataset with all cities included can be used to create a general overview of the effects of different host characteristics on prices of Airbnb's. Later, we will clean these datasets so they can be easily used in our analysis.
 
 ### Variables
 
@@ -83,7 +83,7 @@ We combined these seperate datasets into three different bigger datasets: one da
 
 ### Research method
 
-This project will use the OLS regression method to examine the effect of different host characteristics of Airbnb's in high and low inflation countries. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price in dollars. The independent variables are given in the table above. The regression is as follows:
+This project will use the OLS regression method to examine the effect of different host characteristics of Airbnb's in low and high inflation countries. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price in dollars. The independent variables are given in the table above. The regression is as follows:
 
 *Y = b0 + b1X1 + b2X2 + b3X3 + b4X4 + b5X5 + b6X6*
 
