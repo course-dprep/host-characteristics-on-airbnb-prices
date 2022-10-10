@@ -3,28 +3,28 @@
 ### Are host characteristics influencing the price?
 
 ## Table of content
-[1. Our project](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#1-our-project)
-- [Short project description and research motivation](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#short-project-description-and-research-motivation)
-- [Research question](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#research-question)
-- [Conceptual model](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#conceptual-model)
+[1. Our project](https://github.com/course-dprep/team-assignment-team-6/master/README.md#1-our-project)
+- [Short project description and research motivation](https://github.com/course-dprep/team-assignment-team-6/master/README.md#short-project-description-and-research-motivation)
+- [Research question](https://github.com/course-dprep/team-assignment-team-6/master/README.md#research-question)
+- [Conceptual model](https://github.com/course-dprep/team-assignment-team-6/master/README.md#conceptual-model)
                                                                                                                   
-[2. Method](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#2-method)
-- [Datasets](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#datasets)
-- [Variables](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#variables)
-- [Research method](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#research-method)
+[2. Method](https://github.com/course-dprep/team-assignment-team-6/master/README.md#2-method)
+- [Datasets](https://github.com/course-dprep/team-assignment-team-6/master/README.md#datasets)
+- [Variables](https://github.com/course-dprep/team-assignment-team-6/master/README.md#variables)
+- [Research method](https://github.com/course-dprep/team-assignment-team-6/master/README.md#research-method)
 
-[3. Results and interpretation](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#results-and-interpretation)
+[3. Results and interpretation](https://github.com/course-dprep/team-assignment-team-6/master/README.md#results-and-interpretation)
 
-[4. Repository](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#4-repository)
-- [Structure](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#structure)
+[4. Repository](https://github.com/course-dprep/team-assignment-team-6/master/README.md#4-repository)
+- [Structure](https://github.com/course-dprep/team-assignment-team-6/master/README.md#structure)
 
-[5. Running instructions](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#5-running-instructions))
-- [Software](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#software)
-- [Running the code](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#running-the-code)
+[5. Running instructions](https://github.com/course-dprep/team-assignment-team-6/master/README.md#5-running-instructions)
+- [Software](https://github.com/course-dprep/team-assignment-team-6/master/README.md#software)
+- [Running the code](https://github.com/course-dprep/team-assignment-team-6/master/README.md#running-the-code)
 
-[6. More resources](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#more-resources)
+[6. More resources](https://github.com/course-dprep/team-assignment-team-6/master/README.md#more-resources)
 
-[7. About](https://github.com/course-dprep/team-assignment-team-6/edit/master/README.md#about)
+[7. About](https://github.com/course-dprep/team-assignment-team-6/master/README.md#about)
 
 
 ## 1. Our project
