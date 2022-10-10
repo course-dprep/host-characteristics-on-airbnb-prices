@@ -116,14 +116,23 @@ The results of the full dataset regression (3) show the overall effect of host c
 
 ### Structure 
 ├── README.md
+
 ├── data
+
 ├── gen
+
 │   ├── analysis
+
 │   ├── data-preparation
+
 │   └── paper
+
 └── src
+
     ├── analysis
+    
     ├── data-preparation
+    
     └── paper
 
 
@@ -131,8 +140,8 @@ The results of the full dataset regression (3) show the overall effect of host c
 Explain to potential users how to run/replicate your workflow. If necessary, touch upon the required input data, which secret credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. --> avcp
 
 ### Software
-- Make: [Click here to see how to install Make] (https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
-- R and RStudio: [Click here to see how to install R and RStudio] (https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
+- Make: [Click here to see how to install Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
+- R and RStudio: [Click here to see how to install R and RStudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
 
 ### Running the code
 
