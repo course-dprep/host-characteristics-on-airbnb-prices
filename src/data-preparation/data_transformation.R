@@ -13,8 +13,6 @@ full_dataset_host_variables <- full_dataset_cities %>% select(c("host_id", "host
                                                                 "host_response_rate", "host_is_superhost", "host_has_profile_pic",
                                                                 "host_identity_verified", "price", "city_name", "inflation"))
 
-table(low_inflation_host_variables$host_is_superhost)
-
 
 #2.2 Create dummy variables for for the boolean variables
 variables <- c("host_is_superhost", "host_has_profile_pic", "host_identity_verified")
@@ -24,6 +22,7 @@ for (x in variables){
   high_inflation_host_variables[x] <- ifelse(high_inflation_host_variables[x] == "t", 1, 0)
   full_dataset_host_variables[x] <- ifelse(full_dataset_host_variables[x] == "t", 1, 0)
 }
+
 
 # see all possible values of the dummies to test if it worked
 # table(low_inflation_host_variables$host_has_profile_pic)
