@@ -1,3 +1,5 @@
+# Load packages
+library(stargazer)
 # load 
 load("./gen/analysis/input/data_cleaned.RData")
 
@@ -25,13 +27,15 @@ names(r3$coefficients)
 
 table(high_inflation_dataset$host_response_time)
 
-library(stargazer)
-stargazer(r1, r2, r3, title="Regression Results",
-          align=TRUE, dep.var.labels= c("price in dollars"),
-          column.labels = c("low inflation", "high inflation", "full dataset"),
-          covariate.labels = c("host is superhost", "host has profile picture", "host identity is verified",
-                               "host response time (within a few hours)", "host response time within a day",
-                               "host response time > a few days", "host response rate", "host years", "Intercept"),
-          omit.stat=c("LL","ser","f"), type="html", out="Regression_output.html")
+stargazer(r1, r2, r3, title="Effect of host characteristics on Airbnb prices",
+          dep.var.caption = 'Price in dollars',
+          dep.var.labels= '',
+          column.labels = c('Low inflation', 'High inflation', "Full dataset"),
+          covariate.labels = c('Host is superhost', 'Host has profile picture', 'Host identity verified',
+                               'Host response within a few hours', 'Host response time within a day',
+                               'Host response time is a few days or more', 'Host response rate', 'Host years', 'Constant'),
+          notes.label = 'Significance levels',
+          type = 'html',
+          out='../../gen/analysis/model_report_airbnb.html')
 
 
