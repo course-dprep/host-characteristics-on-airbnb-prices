@@ -36,6 +36,6 @@ stargazer(r1, r2, r3, title="Effect of host characteristics on Airbnb prices",
                                'Host response time is a few days or more', 'Host response rate', 'Host years', 'Constant'),
           notes.label = 'Significance levels',
           type = 'html',
-          out='../../gen/analysis/model_report_airbnb.html')
+          out='../../gen/analysis/output/model_report_airbnb.html')
 
 
