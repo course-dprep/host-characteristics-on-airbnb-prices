@@ -13,22 +13,17 @@ full_dataset_host_variables <- full_dataset_cities %>% select(c("host_id", "host
                                                                 "host_response_rate", "host_is_superhost", "host_has_profile_pic",
                                                                 "host_identity_verified", "price", "city_name", "inflation"))
 
+table(low_inflation_host_variables$host_is_superhost)
+
 
 #2.2 Create dummy variables for for the boolean variables
-# Make dummy of the variable "host_is_superhost"
-low_inflation_host_variables$host_is_superhost <- ifelse(low_inflation_host_variables$host_is_superhost == "t", 1, 0)
-high_inflation_host_variables$host_is_superhost <- ifelse(high_inflation_host_variables$host_is_superhost == "t", 1, 0)
-full_dataset_host_variables$host_is_superhost <- ifelse(full_dataset_host_variables$host_is_superhost == "t", 1, 0)
+variables <- c("host_is_superhost", "host_has_profile_pic", "host_identity_verified")
 
-# Make dummy of the variable "host_has_profile_pic" 
-low_inflation_host_variables$host_has_profile_pic <- ifelse(low_inflation_host_variables$host_has_profile_pic == "t", 1, 0)
-high_inflation_host_variables$host_has_profile_pic <- ifelse(high_inflation_host_variables$host_has_profile_pic == "t", 1, 0)
-full_dataset_host_variables$host_has_profile_pic <- ifelse(full_dataset_host_variables$host_has_profile_pic == "t", 1, 0)
-
-# Make dummy of the variable "host_identity_verified"
-low_inflation_host_variables$host_identity_verified <- ifelse(low_inflation_host_variables$host_identity_verified == "t", 1, 0)
-high_inflation_host_variables$host_identity_verified <- ifelse(high_inflation_host_variables$host_identity_verified == "t", 1, 0)
-full_dataset_host_variables$host_identity_verified <- ifelse(full_dataset_host_variables$host_identity_verified == "t", 1, 0)
+for (x in variables){
+  low_inflation_host_variables[x] <- ifelse(low_inflation_host_variables[x] == "t", 1, 0)
+  high_inflation_host_variables[x] <- ifelse(high_inflation_host_variables[x] == "t", 1, 0)
+  full_dataset_host_variables[x] <- ifelse(full_dataset_host_variables[x] == "t", 1, 0)
+}
 
 # see all possible values of the dummies to test if it worked
 # table(low_inflation_host_variables$host_has_profile_pic)
