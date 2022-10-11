@@ -1,3 +1,8 @@
+######################
+###  DOWNLOAD DATA ####
+######################
+
+# Create data folder 
 dir.create('../../data')
 
 # creating a list with the download link and filenames of the raw data 
