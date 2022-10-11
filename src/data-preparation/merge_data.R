@@ -1,7 +1,15 @@
-dir.create('../../gen')
-dir.create('../../gen/data-preparation')
-dir.create('../../gen/data-preparation/temp')
-# Load datasets into R 
+
+##############################
+###### 1. MERGE DATA #########
+##############################
+
+# Loading packages
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+#1.1 Load datasets into R 
 #“bad” countries (high inflation)
 Boston <- read.csv(gzfile('../../data/listings-united-states.csv.gz')) 
 Rio <- read.csv(gzfile('../../data/listings-brazil.csv.gz')) 
@@ -16,8 +24,7 @@ Beijing <- read.csv(gzfile('../../data/listings-china.csv.gz'))
 Bangkok <- read.csv(gzfile('../../data/listings-thailand.csv.gz'))
 Athens <- read.csv(gzfile('../../data/listings-greece.csv.gz'))
 
-# Make new variable with city for each city
-library(dplyr)
+#1.2 Make new variable with city for each city
 # High inflation
 Capetown$city_name <- c("capetown")
 Santiago$city_name <- c("santiago")
@@ -31,6 +38,7 @@ Beijing$city_name <- c("beijing")
 Bangkok$city_name <- c("bankok")
 Athens$city_name <- c("athens")
 
+#1.3 Convert data from cities into datasets
 # Make dataset for high inflation cities
 high_inflation_dataset <- bind_rows(Capetown, Santiago, Mexico, Rio, Boston)
 
@@ -47,10 +55,9 @@ low_inflation_dataset$inflation <- 1
 full_dataset_cities <- bind_rows(low_inflation_dataset, high_inflation_dataset)
 
 # Write csv
-library(readr)
-write_csv(full_dataset_cities, "merged_full_dataset_cities.csv")
-write_csv(high_inflation_dataset, "merged_high_inflation_dataset.csv")
-write_csv(low_inflation_dataset, "merged_low_inflation_dataset.csv")
+# write_csv(full_dataset_cities, "merged_full_dataset_cities.csv")
+# write_csv(high_inflation_dataset, "merged_high_inflation_dataset.csv")
+# write_csv(low_inflation_dataset, "merged_low_inflation_dataset.csv")
 
 
 
