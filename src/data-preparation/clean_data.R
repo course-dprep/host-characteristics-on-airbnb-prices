@@ -2,6 +2,13 @@
 ###### 3. SUBSET DATA #########
 ##############################
 
+# read data
+full_dataset_host_variables <- read.csv( "../../gen/data-preparation/temp/transformed_full_dataset_cities.csv")
+high_inflation_host_variables <- read.csv("../../gen/data-preparation/temp/transformed_high_inflation_dataset.csv")
+low_inflation_host_variables <- read.csv("../../gen/data-preparation/temp/transformed_low_inflation_dataset.csv")
+
+
+
 #3.1 Recoding variables to make dummy variables  
 # Add new recoded variables 
 low_inflation_host_variables$host_response_time_recoded <- low_inflation_host_variables$host_response_time # first we make a clone and then we are going to change the clone
@@ -172,6 +179,6 @@ full_dataset_without_dup$price_in_dollars <- round(full_dataset_without_dup$pric
 
 
 ####### WRITE CSV FILES OF THE COMPLETE DATASETS #######
-#write_csv(full_dataset_without_dup, "../team-assignment-team-6/gen/data-preparation/output/full_dataset_complete.csv")
-#write_csv(high_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/high_inflation_complete.csv")
-#write_csv(low_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/low_inflation_complete.csv")
+write_csv(full_dataset_without_dup, "../team-assignment-team-6/gen/data-preparation/output/full_dataset_complete.csv")
+write_csv(high_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/high_inflation_complete.csv")
+write_csv(low_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/low_inflation_complete.csv")
