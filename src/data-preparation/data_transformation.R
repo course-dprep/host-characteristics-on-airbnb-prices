@@ -2,6 +2,13 @@
 ###### 2. DATA TRANSFORMATION ########
 ######################################
 
+
+# load packages
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
 # Read data
 full_dataset_cities <- read.csv("../../gen/data-preparation/temp/merged_full_dataset_cities.csv")
 high_inflation_dataset <- read.csv("../../gen/data-preparation/temp/merged_high_inflation_dataset.csv")

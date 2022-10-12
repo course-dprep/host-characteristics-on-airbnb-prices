@@ -2,6 +2,13 @@
 ###### 3. SUBSET DATA #########
 ##############################
 
+
+# load packages 
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
 # read data
 full_dataset_host_variables <- read.csv( "../../gen/data-preparation/temp/transformed_full_dataset_cities.csv")
 high_inflation_host_variables <- read.csv("../../gen/data-preparation/temp/transformed_high_inflation_dataset.csv")
