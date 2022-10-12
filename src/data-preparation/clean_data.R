@@ -186,6 +186,6 @@ full_dataset_without_dup$price_in_dollars <- round(full_dataset_without_dup$pric
 
 
 ####### WRITE CSV FILES OF THE COMPLETE DATASETS #######
-write.csv(full_dataset_without_dup, "../team-assignment-team-6/gen/data-preparation/output/full_dataset_complete.csv")
-write.csv(high_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/high_inflation_complete.csv")
-write.csv(low_inflation_without_dup, "../team-assignment-team-6/gen/data-preparation/output/low_inflation_complete.csv")
+write.csv(full_dataset_without_dup, "../../gen/data-preparation/output/full_dataset_complete.csv")
+write.csv(high_inflation_without_dup, "../../gen/data-preparation/output/high_inflation_complete.csv")
+write.csv(low_inflation_without_dup, "../../gen/data-preparation/output/low_inflation_complete.csv")
