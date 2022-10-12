@@ -28,13 +28,10 @@ r3 = lm(price_in_dollars ~ host_is_superhost +  host_has_profile_pic + host_iden
 summary(r3)
 
 
-# see names of coefficients
-names(r1$coefficients)
-names(r2$coefficients)
-names(r3$coefficients)
 
-table(high_inflation_dataset$host_response_time)
 
+
+### Generating html output 
 stargazer(r1, r2, r3, title="Effect of host characteristics on Airbnb prices",
           dep.var.caption = 'Price in dollars',
           dep.var.labels= '',
