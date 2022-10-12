@@ -1,7 +1,15 @@
 # Load packages
 library(stargazer)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
 # load 
-load("./gen/analysis/input/data_cleaned.RData")
+full_dataset_without_dup <- read.csv("../../gen/data-preparation/output/full_dataset_complete.csv")
+high_inflation_without_dup <- read.csv("../../gen/data-preparation/output/high_inflation_complete.csv")
+low_inflation_without_dup <- read.csv("../../gen/data-preparation/output/low_inflation_complete.csv")
+
 
 # Estimate model 1 
 r1 = lm(price_in_dollars ~ host_is_superhost +  host_has_profile_pic + host_identity_verified + host_response_time_recoded + 
@@ -37,5 +45,7 @@ stargazer(r1, r2, r3, title="Effect of host characteristics on Airbnb prices",
           notes.label = 'Significance levels',
           type = 'html',
           out='../../gen/analysis/output/model_report_airbnb.html')
+
+
 
 
