@@ -55,9 +55,9 @@ low_inflation_dataset$inflation <- 1
 full_dataset_cities <- bind_rows(low_inflation_dataset, high_inflation_dataset)
 
 # Write csv
-# write_csv(full_dataset_cities, "merged_full_dataset_cities.csv")
-# write_csv(high_inflation_dataset, "merged_high_inflation_dataset.csv")
-# write_csv(low_inflation_dataset, "merged_low_inflation_dataset.csv")
+write_csv(full_dataset_cities, "merged_full_dataset_cities.csv")
+write_csv(high_inflation_dataset, "merged_high_inflation_dataset.csv")
+write_csv(low_inflation_dataset, "merged_low_inflation_dataset.csv")
 
 
 
