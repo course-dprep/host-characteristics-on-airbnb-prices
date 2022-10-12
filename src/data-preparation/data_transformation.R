@@ -36,9 +36,9 @@ for (x in variables){
 #table(high_inflation_host_variables$host_is_superhost)
 #table(full_dataset_host_variables$host_identity_verified)
 
-write_csv(full_dataset_host_variables, "../../gen/data-preparation/temp/transformed_full_dataset_cities.csv")
-write_csv(high_inflation_host_variables, "../../gen/data-preparation/temp/transformed_high_inflation_dataset.csv")
-write_csv(low_inflation_host_variables, "../../gen/data-preparation/temp/transformed_low_inflation_dataset.csv")
+write.csv(full_dataset_host_variables, "../../gen/data-preparation/temp/transformed_full_dataset_cities.csv")
+write.csv(high_inflation_host_variables, "../../gen/data-preparation/temp/transformed_high_inflation_dataset.csv")
+write.csv(low_inflation_host_variables, "../../gen/data-preparation/temp/transformed_low_inflation_dataset.csv")
 
 
 
