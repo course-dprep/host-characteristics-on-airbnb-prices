@@ -123,9 +123,9 @@ The results of the full dataset regression (3) show the overall effect of host c
 │   ├── data-preparation
 │   └── paper
 └── src
-    ├── analysis
-    ├── data-preparation
-    └── paper
+   ├── analysis
+   ├── data-preparation
+   └── paper
 
 ## 5. Running instructions
 Explain to potential users how to run/replicate your workflow. If necessary, touch upon the required input data, which secret credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. --> avcp
