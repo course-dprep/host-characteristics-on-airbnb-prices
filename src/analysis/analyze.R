@@ -36,12 +36,14 @@ stargazer(r1, r2, r3, title="Effect of host characteristics on Airbnb prices",
           dep.var.caption = 'Price in dollars',
           dep.var.labels= '',
           column.labels = c('Low inflation', 'High inflation', "Full dataset"),
-          covariate.labels = c('Host is superhost', 'Host has profile picture', 'Host identity verified',
-                               'Host response within a few hours', 'Host response time within a day',
-                               'Host response time is a few days or more', 'Host response rate', 'Host years', 'Constant'),
+         # covariate.labels = c('Host is superhost', 'Host has profile picture', 'Host identity verified',
+                            #   'Host response within a few hours', 'Host response time within a day',
+                            #   'Host response time is a few days or more', 'Host response rate', 'Host years', 'Constant'),
           notes.label = 'Significance levels',
           type = 'html',
-          out='../../gen/analysis/output/model_report_airbnb.html')
+          out="../../gen/analysis/output/model_report_airbnb.html")
+
+
 
 
 
