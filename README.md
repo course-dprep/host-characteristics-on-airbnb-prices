@@ -151,8 +151,29 @@ library(stargazer)
 
 ### Running the code
 
-NOG TOEVOEGEN 
+#### Using the makefile
+It is most easy to run the makefile, this will run each source code in the right sequence leading eventually to the results of the analysis. You can run the makefile by following these steps:
 
+1. Fork this repository to your own GitHub account
+2. Clone the repository just forked to your local computer using Git / terminal / command prompt. Go to the right directory you want to clone the repository into and type:
+```
+git clone https://github.com/{your username}/host-characteristics-on-airbnb-prices.git
+```
+3. Set your working directory to the just cloned folder using cd host-characteristics-on-airbnb-prices
+4. Type make, this will run all the source code (it could take a while)
+5. In your local folder, the generated stargazer output with the regression results can be found:
+```
+/host-characteristics-on-airbnb-prices/gen/analysis/output/model_report_airbnb.html
+```
+
+#### Run each sourcecode seperately
+If you want to run each dataset seperately, this should be done in the following order:
+
+1. download_data.R
+2. merge_data.R
+3. data_transformation.R
+4. clean_data.R
+5. analyze.R
 
 ## 6. More resources
 The following website was used to decide which cities to include in the high and low inflation dataset:
