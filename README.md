@@ -1,4 +1,4 @@
-# The effect of host characteristics on price 
+# The effect of host characteristics on prices of AirBnB's 
 
 ### Are host characteristics influencing the price?
 
