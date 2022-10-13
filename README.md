@@ -118,7 +118,7 @@ The results of the full dataset regression (3) show the overall effect of host c
 ## 4. Repository overview
 
 ### Structure 
-
+```
 ├── README.md
 ├── data
 ├── gen
@@ -126,16 +126,28 @@ The results of the full dataset regression (3) show the overall effect of host c
 │   ├── data-preparation
 │   └── paper
 └── src
-   ├── analysis
-   ├── data-preparation
-   └── paper
+|  ├── analysis
+|  ├── data-preparation
+|  └── paper
+└── make file
+```
 
 ## 5. Running instructions
-Explain to potential users how to run/replicate your workflow. If necessary, touch upon the required input data, which secret credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. --> avcp
 
 ### Software
+For this research, the downloading of the data, the cleaning of the data and the OLS regression were done using R and Rstudio. To run each file smoothly in one time, a makefile was generated.
+
 - Make: [Click here to see how to install Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) 
 - R and RStudio: [Click here to see how to install R and RStudio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/)
+
+In R, the following packages were used. If you did not download them yet, please use install.packages() to do so. Otherwise, you can load each package using the library() function:
+```
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(stargazer)
+```
 
 ### Running the code
 
