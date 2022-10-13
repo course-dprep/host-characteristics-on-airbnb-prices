@@ -154,7 +154,8 @@ library(stargazer)
 NOG TOEVOEGEN 
 
 
-## 6. More rescources
+## 6. More resources
+The following website was used to decide which cities to include in the high and low inflation dataset:
 - https://www.theglobaleconomy.com/rankings/inflation/
 
 
