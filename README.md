@@ -1,4 +1,5 @@
 # The effect of host characteristics on prices of Airbnb's 
+![Screenshot 2022-10-13 at 20 18 19](https://user-images.githubusercontent.com/112802090/195675185-14e95cef-77c5-42ca-bdbc-858bd513b24f.png)
 
 ### Are host characteristics influencing the price?
 
@@ -38,7 +39,7 @@ will investigate the effect of host characteristics on Airbnb prices.
 Due to recent high inflation rates, it is interesting to compare this effect of host characteristics on price between cities with low inflation and cities with high
 inflation. Currently, inflation in many parts of the world is increasing. This inflation is due to many economies recovering from the COVID recession in 2020.
 Additionally this inflation is due to the rising gas prices. This research will use two city subsets, namely a subset of five cities with high inflation rates
-consisting of: Rio de Janeiro, Mexico City, Boston, Cape Town and Santiago. The subset of five cities with low inflation, consisting out of: Tokyo, Geneva, Beijing,
+consisting of: Rio de Janeiro, Mexico City, Boston, Cape Town and Santiago and a subset of five cities with low inflation, consisting out of: Tokyo, Geneva, Beijing,
 Bangkok and Athens. These cities were selected based on inflation data from the past few years from (https://www.theglobaleconomy.com/rankings/inflation/).  To what extent does inflation moderate the effect of host characteristics on the Airbnb prices in these countries? 
 
 ### Research question
@@ -79,6 +80,8 @@ We combined these seperate datasets into three different bigger datasets: one da
 
 ### Variables
 
+In total, the datasets consist of 75 different variables. However, for this research, only the specific variables about host characteristics and prices of the Airbnb's are relevant. The following variables in the datasets will be used and analyzed in our research:
+
 | **Variable name**                        | **Variable explanation**                           |
 | ---------------------------------------- |----------------------------------------------------|
 | price_in_dollars                   (Y)   | Price of the Airbnb in dollars                     |
@@ -91,7 +94,7 @@ We combined these seperate datasets into three different bigger datasets: one da
 
 ### Research method
 
-This project will use the OLS regression method to examine the effect of different host characteristics of Airbnb's in low and high inflation countries. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price in dollars. The independent variables are given in the table above. The regression is as follows:
+This project will use the Ordinary Least Square (OLS) regression method to examine the effect of different host characteristics of Airbnb's in low and high inflation countries. We can use the OLS regression to see whether the relationship between the variables is positive or negative. The dependent variable is the Airbnb price in dollars. The independent variables are given in the table above, notated by X. The regression is as follows:
 
 *Y = b0 + b1X1 + b2X2 + b3X3 + b4X4 + b5X5 + b6X6*
 
@@ -101,7 +104,7 @@ Here, host_is_superhost, host_has_profile_pic and host_identity_verified are dum
 ## 3. Results and interpretation
 To investigate the effect of host characteristics (independent variables) on prices (dependent variable) between cities with low inflation or high inflation, we conducted a linear regression for the low inflation, high inflation and full datasests. The output of the regressions can be found below: 
 
-![Schermafbeelding 2022-10-10 om 12 03 39](https://user-images.githubusercontent.com/112611059/194842123-fe4c1d5b-be2c-4c5b-bbb9-a3abb6c81e1f.png)
+![Screenshot 2022-10-13 at 20 19 53](https://user-images.githubusercontent.com/112802090/195675513-b155a2c2-0ef6-4c5e-a299-be5b6a53b926.png)
 
 The results of the low inflation regression (1) show that the host_identity_verified, host_response_time_recoded and host_years have a significant effect on the price. Host_identity_verified has a positive effect on the price of cities with low inflation. This indicates that when the host is identified the price goes up. If the host identity is verified, it can increase trust and the price can go up. However, the host_response_time_recoded and host_years have a negative effect on the price. This means that when the host response time goes up, the price goes down. Furthermore, it shows that if the host has been a host for a longer time, the price goes down. 
 
