@@ -13,7 +13,7 @@ Due to inflation it was valuable to look at the prices of Airbnb's in two subset
 
 2. Composition of dataset (what's in the data?)
 
-low_inflation_dataset consists out of 5 lowest inflation cities. The variables we used are the host characteristics: host_since, host_response_time, host_response_rate, hoste_is_super_host, host_has_profile_pic, host_idendity_verified
+high_inflation_dataset consists out of 5 highest inflation cities. The variables we used are the host characteristics: host_since, host_response_time, host_response_rate, hoste_is_super_host, host_has_profile_pic, host_idendity_verified
 
 
 3. Collection process (how was the data collected?)
