@@ -1,4 +1,4 @@
-# The effect of host characteristics on prices of AirBnB's 
+# The effect of host characteristics on prices of Airbnb's 
 
 ### Are host characteristics influencing the price?
 
@@ -13,7 +13,7 @@
 - [Variables](https://github.com/course-dprep/team-assignment-team-6#variables)
 - [Research method](https://github.com/course-dprep/team-assignment-team-6#research-method)
 
-[3. https://github.com/course-dprep/team-assignment-team-6#3-results-and-interpretation)
+[3. Results and interpretation](https://github.com/course-dprep/team-assignment-team-6#3-results-and-interpretation)
 
 [4. Repository](https://github.com/course-dprep/team-assignment-team-6/master/README.md#4-repository)
 - [Structure](https://github.com/course-dprep/team-assignment-team-6#structure)
@@ -115,6 +115,7 @@ The results of the full dataset regression (3) show the overall effect of host c
 ## 4. Repository overview
 
 ### Structure 
+
 ├── README.md
 ├── data
 ├── gen
